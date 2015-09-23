@@ -21,7 +21,7 @@ public class Main {
 		cars.add(new Car("Ford","Focus",2000,4));
 		cars.add(new Car("Opel","Insignia",2200,4));
 		cars.add(new Car("Seat","Ibiza",1600,4));
-		System.out.println("The car in position 2 has a fiscal horsepower of: " + cars.get(2).getFiscalHorsepower());
+		System.out.printf("The car in position 2 has a fiscal horsepower of: %.2f", cars.get(2).getFiscalHorsepower());
 	}
 
 }

@@ -50,7 +50,7 @@ public class Car {
 		this.model = model;
 		this.nCylinders = nCylinders;
 		this.engDisplacement = engDisplacement;
-		this.fiscalHorsepower = 0.08 * this.nCylinders * Math.pow((this.engDisplacement / this.nCylinders), 0.6);
+		this.fiscalHorsepower = 0.08 * (double)this.nCylinders * Math.pow(((double)this.engDisplacement / (double)this.nCylinders), 0.6);
 	}
 
 }
