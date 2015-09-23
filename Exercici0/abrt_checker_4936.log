@@ -1,1 +1,0 @@
-Uncaught java.lang.StackOverflowError exception in thread "main" in a method car.Car.getPotencia_fiscal() with signature ()D

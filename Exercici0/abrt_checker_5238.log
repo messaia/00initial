@@ -1,6 +1,0 @@
-Uncaught java.lang.Error exception in thread "main" in a method car.M0801.main() with signature ([Ljava/lang/String;)V
-Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
-	The method setNombre_cilindres(int) in the type Car is not applicable for the arguments (String)
-	The method setCilindrada(int) in the type Car is not applicable for the arguments (String)
-
-	at car.M0801.main(M0801.java:15) [file:/home/users/inf/wiaw2/iaw47893936/workspace/Exercici0/bin/car/M0801.class]
