@@ -1,0 +1,5 @@
+Uncaught java.lang.Error exception in thread "main" in a method car.Main.main() with signature ([Ljava/lang/String;)V
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Invalid escape sequence (valid ones are  \b  \t  \n  \f  \r  \"  \'  \\ )
+
+	at car.Main.main(Main.java:32) [file:/home/users/inf/wiaw2/iaw47893936/git/00initial/M03%20-%20Ex%208.3/bin/car/Main.class]
