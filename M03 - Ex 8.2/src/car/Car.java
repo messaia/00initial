@@ -8,13 +8,15 @@ package car;
  *
  */
 public class Car {
-
+	
+	// Attributes
 	String brand;
 	String model;
 	int nCylinders;
 	int engDisplacement;
 	double fiscalHorsepower;
 	
+	// Getter and setters
 	public String getBrand() {
 		return brand;
 	}
@@ -42,9 +44,11 @@ public class Car {
 	public double getFiscalHorsepower() {
 		return fiscalHorsepower;
 	}
+	// This calculates the fiscal horsepower of the car
 	public void setFiscalHorsepower() {
 		this.fiscalHorsepower = 0.08 * this.nCylinders * Math.pow((this.engDisplacement / this.nCylinders), 0.6);
 	}
+	// The default constructor
 	public Car(String brand, String model, int nCylinders, int engDisplacement) {
 		this.brand = brand;
 		this.model = model;
@@ -52,5 +56,4 @@ public class Car {
 		this.engDisplacement = engDisplacement;
 		this.fiscalHorsepower = 0.08 * (double)this.nCylinders * Math.pow(((double)this.engDisplacement / (double)this.nCylinders), 0.6);
 	}
-
 }
