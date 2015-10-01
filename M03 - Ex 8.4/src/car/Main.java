@@ -30,12 +30,22 @@ public class Main {
 		fifoAutos.offer(new Car("Seat","Ibiza",1600,4));
 		fifoAutos.offer(new Car("Hyundai","Atos",1500,3));
 		
-		PriorityQueue<Car> carsPriorityQueue = new PriorityQueue<Car>();
+		Comparator<Car> comparator = new EngDispComparator();
+		PriorityQueue<Car> carsPriorityQueue = new PriorityQueue<Car>(6,comparator);
 		carsPriorityQueue.offer(new Car("Alfa Romeo","Giulia",2900,6));
 		carsPriorityQueue.offer(new Car("Dacia","Sandero",1200,4));
 		carsPriorityQueue.offer(new Car("Ford","Focus",2000,4));
 		carsPriorityQueue.offer(new Car("Opel","Insignia",2200,4));
 		carsPriorityQueue.offer(new Car("Seat","Ibiza",1600,4));
 		carsPriorityQueue.offer(new Car("Hyundai","Atos",1500,3));
+		System.out.println("\n*******LIST ORDERED BY ENGINE DISPLACEMENT*******************");
+		while(true) {
+			 Car currentCar = carsPriorityQueue.poll();
+			 if(currentCar == null) {
+				 break;
+			 }
+			 System.out.println(currentCar.getBrand() + "\t" + currentCar.getModel() + "\t" + currentCar.getNCylinders() + "\t" + currentCar.getEngDisplacement() + "\t" + currentCar.getFiscalHorsepower());
+		}
+		System.out.println("\n*************************************************************");
 	}
 }

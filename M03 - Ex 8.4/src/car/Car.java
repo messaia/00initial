@@ -3,8 +3,6 @@
  */
 package car;
 
-import java.util.Comparator;
-
 /**
  * @author Alpaca King (miquel.luque.rodriguez@gmail.com)
  *
