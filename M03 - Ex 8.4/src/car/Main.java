@@ -38,7 +38,8 @@ public class Main {
 		carsPriorityQueue.offer(new Car("Opel","Insignia",2200,4));
 		carsPriorityQueue.offer(new Car("Seat","Ibiza",1600,4));
 		carsPriorityQueue.offer(new Car("Hyundai","Atos",1500,3));
-		System.out.println("\n*******LIST ORDERED BY ENGINE DISPLACEMENT*******************");
+		
+		System.out.println("\n*******PRIORITY QUEUE ORDERED BY ENGINE DISPLACEMENT*******");
 		while(true) {
 			 Car currentCar = carsPriorityQueue.poll();
 			 if(currentCar == null) {
@@ -46,6 +47,37 @@ public class Main {
 			 }
 			 System.out.println(currentCar.getBrand() + "\t" + currentCar.getModel() + "\t" + currentCar.getNCylinders() + "\t" + currentCar.getEngDisplacement() + "\t" + currentCar.getFiscalHorsepower());
 		}
-		System.out.println("\n*************************************************************");
+		System.out.println("***********************************************************\n");
+		
+		lifoAutos.offer(new Car("Fiat","Panda",900,2));
+		fifoAutos.offer(new Car("Fiat","Panda",900,2));
+		carsPriorityQueue.offer(new Car("Fiat","Panda",900,2));
+		
+		System.out.println("\n************************LIFO LIST************************");
+		while(true) {
+			 Car currentCar = lifoAutos.pollFirst();
+			 if(currentCar == null) {
+				 break;
+			 }
+			 System.out.println(currentCar.getBrand() + "\t" + currentCar.getModel() + "\t" + currentCar.getNCylinders() + "\t" + currentCar.getEngDisplacement() + "\t" + currentCar.getFiscalHorsepower());
+		}
+		System.out.println("***********************************************************\n");
+		
+		System.out.println("\n************************FIFO LIST************************");
+		while(true) {
+			 Car currentCar = fifoAutos.pollLast();
+			 if(currentCar == null) {
+				 break;
+			 }
+			 System.out.println(currentCar.getBrand() + "\t" + currentCar.getModel() + "\t" + currentCar.getNCylinders() + "\t" + currentCar.getEngDisplacement() + "\t" + currentCar.getFiscalHorsepower());
+		}
+		System.out.println("***********************************************************\n");
 	}
+	
+	/*
+	Exemples en la vida real:
+	LLISTA LIFO: La llista d'espera de pacients per a ser atesos per un metge en una consulta mèdica.
+	LLISTA FIFO: Els missatges de veu d'un contestador automàtic que es reprodueixen de més nou a més vell.
+	*/
+	
 }
