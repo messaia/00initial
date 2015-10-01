@@ -16,7 +16,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Creates a list of cars
-		List<Car> cars = new ArrayList<>(5);
+		ArrayList<Car> cars = new ArrayList<>(5);
 		// Adds cars to the list
 		cars.add(new Car("Alfa Romeo","Giulia",2900,6));
 		cars.add(new Car("Dacia","Sandero",1200,4));

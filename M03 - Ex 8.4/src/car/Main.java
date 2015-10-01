@@ -16,21 +16,21 @@ public class Main {
 	public static void main(String[] args) {
 		// Creates a linked list that will be a LIFO list
 		LinkedList<Car> lifoAutos = new LinkedList<Car>();
-		lifoAutos.offer(new Car("Alfa Romeo","Giulia",2900,6));
-		lifoAutos.offer(new Car("Dacia","Sandero",1200,4));
-		lifoAutos.offer(new Car("Ford","Focus",2000,4));
-		lifoAutos.offer(new Car("Opel","Insignia",2200,4));
-		lifoAutos.offer(new Car("Seat","Ibiza",1600,4));
-		lifoAutos.offer(new Car("Hyundai","Atos",1500,3));
+		lifoAutos.offerLast(new Car("Alfa Romeo","Giulia",2900,6));
+		lifoAutos.offerLast(new Car("Dacia","Sandero",1200,4));
+		lifoAutos.offerLast(new Car("Ford","Focus",2000,4));
+		lifoAutos.offerLast(new Car("Opel","Insignia",2200,4));
+		lifoAutos.offerLast(new Car("Seat","Ibiza",1600,4));
+		lifoAutos.offerLast(new Car("Hyundai","Atos",1500,3));
 
 		// Creates a linked list that will be a FIFO list
 		LinkedList<Car> fifoAutos = new LinkedList<Car>();
-		fifoAutos.offer(new Car("Alfa Romeo","Giulia",2900,6));
-		fifoAutos.offer(new Car("Dacia","Sandero",1200,4));
-		fifoAutos.offer(new Car("Ford","Focus",2000,4));
-		fifoAutos.offer(new Car("Opel","Insignia",2200,4));
-		fifoAutos.offer(new Car("Seat","Ibiza",1600,4));
-		fifoAutos.offer(new Car("Hyundai","Atos",1500,3));
+		fifoAutos.offerFirst(new Car("Alfa Romeo","Giulia",2900,6));
+		fifoAutos.offerFirst(new Car("Dacia","Sandero",1200,4));
+		fifoAutos.offerFirst(new Car("Ford","Focus",2000,4));
+		fifoAutos.offerFirst(new Car("Opel","Insignia",2200,4));
+		fifoAutos.offerFirst(new Car("Seat","Ibiza",1600,4));
+		fifoAutos.offerFirst(new Car("Hyundai","Atos",1500,3));
 		
 		// Creates a car comparator using the overriden class
 		Comparator<Car> comparator = new EngDispComparator();
@@ -56,8 +56,8 @@ public class Main {
 		System.out.println("***********************************************************\n");
 		
 		// Adds a new car to all of the lists
-		lifoAutos.offer(new Car("Fiat","Panda",900,2));
-		fifoAutos.offer(new Car("Fiat","Panda",900,2));
+		lifoAutos.offerLast(new Car("Fiat","Panda",900,2));
+		fifoAutos.offerFirst(new Car("Fiat","Panda",900,2));
 		carsPriorityQueue.offer(new Car("Fiat","Panda",900,2));
 		
 		// Prints the LIFO list, taking the first car each time
