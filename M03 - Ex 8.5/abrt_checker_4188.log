@@ -1,0 +1,4 @@
+Uncaught java.lang.IllegalStateException exception in thread "main" in a method java.util.HashMap$HashIterator.remove() with signature ()V
+Exception in thread "main" java.lang.IllegalStateException
+	at java.util.HashMap$HashIterator.remove(HashMap.java:942) [jar:file:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.60-2.4.3.0.fc20.x86_64/jre/lib/rt.jar!/java/util/HashMap$HashIterator.class]
+	at car.Main.main(Main.java:34) [file:/home/users/inf/wiaw2/iaw47893936/git/00initial/M03%20-%20Ex%208.5/bin/car/Main.class]
