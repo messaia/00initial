@@ -13,7 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Creates a map of type Car with a key
-		Map <String,Car>unsortedCarMap = new HashMap<String,Car>();
+		HashMap <String,Car>unsortedCarMap = new HashMap<String,Car>();
 		// Adds cars to the map
 		unsortedCarMap.put("1234 AAA", new Car("Alfa Romeo","Giulia",2900,6));
 		unsortedCarMap.put("2321 BBB", new Car("Seat","Ibiza",1200,3));

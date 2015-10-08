@@ -22,12 +22,32 @@ public class Main {
 		cars.add(daciaSandero);
 		cars.add(new Car("Ford","Focus",2000,4));
 		cars.add(new Car("Opel","Insignia",2200,4));
-		cars.add(new Car("Seat","Ibiza",1600,4));
+		Car ibiza = new Car("Seat","Ibiza",1600,4);
+		cars.add(ibiza);
 		// Prints if the queried car is in the set
 		System.out.println("\nDoes this set contain a Dacia Sandero? " + cars.contains(daciaSandero));
+
+		// While there are cars on the iterator, do
+		
+		boolean elimina = cars.remove(ibiza); 
+		if (elimina) {
+			cars.add(new Car("Seat","Mii",1000,3));
+		}
+		
+		// Adds more cars
+		cars.add(new Car("Hyundai","Atos",1500,3));
+		// Attempt to add a duplicate car
+		if (cars.add(new Car("Ford","Focus",2000,4))){
+			System.out.println("Yes, it is possible to add duplicates, as they ocupy different memory spaces.");
+		} else 	{
+			System.out.println("A duplicate value wasn't added");
+		}
+		
+		// Can't add a car to position 1
+		// cars.add(1,new Car("Audi","A8",4600,8));
+		// Can't replaces a car in position 4
 		// Creates a car iterator
 		Iterator<Car> carIterator = cars.iterator();
-		// While there are cars on the iterator, do
 		while (carIterator.hasNext()){
 			// Stores current car
 			Car car = carIterator.next();
@@ -37,15 +57,8 @@ public class Main {
 				System.out.printf("The Dacia Sandero has a fiscal horsepower of: %.2f\n\n", car.getFiscalHorsepower());
 			}
 		}
-		// Adds more cars
-		cars.add(new Car("Hyundai","Atos",1500,3));
-		cars.add(new Car("Ford","Focus",2000,4));
-		// Adds a duplicate car
-		cars.add(new Car("Ford","Focus",2000,4));
-		System.out.println("Yes, it is possible to add duplicates, as they ocupy different memory spaces.");
-		// Can't add a car to position 1
-		// cars.add(1,new Car("Audi","A8",4600,8));
-		// Can't replaces a car in position 4
+		
+		
 		//cars.set(4, new Car("Seat","Mii",1000,3));
 		System.out.println("It's not possible to either add or replace elements in a HashSet.\n");
 		// Prints the list using an iterator
