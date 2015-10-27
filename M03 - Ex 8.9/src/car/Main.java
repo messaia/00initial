@@ -3,6 +3,7 @@ package car;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.TreeMap;
 
 /**
@@ -28,7 +29,8 @@ public class Main {
 		// Adds all of the unsorted map's elements to the sorted one, sorting them automatically my key
 		sortedCarMap.putAll(unsortedCarMap);
 		
-		MethodClass.erasePlus2500(sortedCarMap);
+		//MethodClass.erasePlus2500(sortedCarMap);
+		erasePlus2500(sortedCarMap);
 		
 		// Calls the method to print the map
 		printMap(sortedCarMap);
@@ -42,15 +44,15 @@ public class Main {
 		}
 	}
 	
-	static public class MethodClass {
+	//static public class MethodClass {
 		
 		public static void erasePlus2500(Map<String,Car> map){
-			for(Map.Entry<String, Car> entry : map.entrySet()) {
+			for(Iterator<Map.Entry<String, Car>> iterator = map.entrySet().iterator(); iterator.hasNext(); ) {
+				Map.Entry<String,Car> entry = iterator.next();
 				if (entry.getValue().getEngDisplacement() > 2500){
-					//System.out.println(entry.getKey() + " => " + entry.getValue());
-					map.remove(entry);
+					iterator.remove();
 				}
 			}
 		}
-	}
+	//}
 }

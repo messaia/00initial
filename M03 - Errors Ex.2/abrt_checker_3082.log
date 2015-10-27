@@ -1,0 +1,6 @@
+Uncaught java.lang.Error exception in thread "main" in a method exceptions.Main.main() with signature ([Ljava/lang/String;)V
+Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
+	FileOutputStream cannot be resolved to a type
+	FileOutputStream cannot be resolved to a type
+
+	at exceptions.Main.main(Main.java:17) [file:/home/users/inf/wiaw2/iaw47893936/workspace/M03%20-%20Errors%20Ex.2/bin/exceptions/Main.class]
